@@ -1,11 +1,11 @@
 {
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Local multi-cloud simulator (AWS/GCP/Azure) with real backends \u2014 full SDK + CLI parity for boto3, aws-cli, google-cloud-*, azure-sdk-*, Terraform.",
   "homepage": "https://github.com/sudhirkumarganti/cloud-learn",
   "license": "MIT",
-  "url": "https://github.com/sudhirkumarganti/cloud-learn/releases/download/v1.2.2/cloud-learn-1.2.2.tar.gz",
-  "hash": "61dddf63512b441aa68245bb446d9d8c3365fa68cb7da5c0a4e51c73d3e63c3e",
-  "extract_dir": "cloud-learn-1.2.2",
+  "url": "https://github.com/sudhirkumarganti/cloud-learn/releases/download/v1.2.3/cloud-learn-1.2.3.tar.gz",
+  "hash": "f08ee2adfd2c0055d63007e6712d4ca8631c87d711f447a2a0694dcb0b671479",
+  "extract_dir": "cloud-learn-1.2.3",
   "depends": [
     "extras/multipass"
   ],
