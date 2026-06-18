@@ -1,11 +1,11 @@
 {
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Local multi-cloud simulator (AWS/GCP/Azure) with real backends \u2014 full SDK + CLI parity for boto3, aws-cli, google-cloud-*, azure-sdk-*, Terraform.",
   "homepage": "https://vyomi.cloud",
   "license": "Business Source License 1.1",
-  "url": "https://github.com/vyomi-cloud/appliance/releases/download/v2.0.5/cloud-learn-2.0.5.tar.gz",
-  "hash": "484259279f8157b7cbd598cc3587395044ebbf255f043d8625dc2a53d7e369ec",
-  "extract_dir": "cloud-learn-2.0.5",
+  "url": "https://github.com/vyomi-cloud/appliance/releases/download/v2.0.6/cloud-learn-2.0.6.tar.gz",
+  "hash": "a30af8669c11007d51e21acfc007df9bb7940e28057e9155c0c952f44af6dabf",
+  "extract_dir": "cloud-learn-2.0.6",
   "depends": [
     "extras/multipass"
   ],
@@ -18,7 +18,18 @@
   "post_install": [
     "Write-Host ''",
     "Write-Host '==> Vyomi installed. Run `vyomi up` to start the simulator.' -ForegroundColor Green",
-    "Write-Host '==> Docs: https://vyomi.cloud/install' -ForegroundColor Cyan"
+    "Write-Host '==> Docs: https://vyomi.cloud/install' -ForegroundColor Cyan",
+    "# Install-funnel phone-home (anonymous; opt-out: $env:VYOMI_NO_TELEMETRY=1).",
+    "# Backgrounded via Start-Job so a slow network never extends scoop install.",
+    "$phoneHome = Join-Path $dir 'packaging\\common\\phone-home.ps1'",
+    "if (Test-Path $phoneHome) {",
+    "  try {",
+    "    Start-Job -ScriptBlock {",
+    "      param($script, $ver)",
+    "      & powershell -NoProfile -ExecutionPolicy Bypass -File $script -Channel scoop -Version $ver",
+    "    } -ArgumentList $phoneHome, '$version' | Out-Null",
+    "  } catch { }",
+    "}"
   ],
   "uninstaller": {
     "script": [
