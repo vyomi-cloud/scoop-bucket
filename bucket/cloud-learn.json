@@ -4,7 +4,7 @@
   "homepage": "https://vyomi.cloud",
   "license": "Business Source License 1.1",
   "url": "https://github.com/vyomi-cloud/appliance/releases/download/v2.1.0.2/cloud-learn-2.1.0.2.tar.gz",
-  "hash": "cd5dfd94e9b607dcca182a26a3d251519819af59135c4b57045594863857c8d1",
+  "hash": "1ed1ce3f4c3d129ca34e7d3500c56680450709ca89bbec17cc6de9cef1e67634",
   "extract_dir": "cloud-learn-2.1.0.2",
   "bin": [
     [
