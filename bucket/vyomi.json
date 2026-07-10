@@ -1,11 +1,11 @@
 {
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Local multi-cloud simulator (AWS/GCP/Azure) with real backends \u2014 full SDK + CLI parity for boto3, aws-cli, google-cloud-*, azure-sdk-*, Terraform.",
   "homepage": "https://vyomi.cloud",
   "license": "Business Source License 1.1",
-  "url": "https://github.com/vyomi-cloud/appliance/releases/download/v2.3.1/cloud-learn-2.3.1.tar.gz",
-  "hash": "2babb6a633f3d9e34fafa55e16c328e90f484ea533cfa6c0339ca90f87c9aceb",
-  "extract_dir": "cloud-learn-2.3.1",
+  "url": "https://github.com/vyomi-cloud/appliance/releases/download/v2.3.2/cloud-learn-2.3.2.tar.gz",
+  "hash": "5e1174e4030f23db2901e09df77a3ec8b0ab112bd53495e50ba0528485606b91",
+  "extract_dir": "cloud-learn-2.3.2",
   "bin": [
     [
       "scripts\\cloud-learn.ps1",
